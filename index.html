@@ -4,35 +4,88 @@
     <meta charset="UTF-8" />
     <title>Food Ordering System</title>
   </head>
-   <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+  />
   <link rel="stylesheet" href="style.css" />
   <body>
     <nav>
       <h1>fOOd Order</h1>
       <div class="rightContent">
-        <h2>Welcome,</h2>
-
-          <button id="loginLogoutButton">Login</button>
-        </div>
+        <button id="addItemButton">Add Item</button>
+        <button id="loginLogoutButton">Login</button>
+      </div>
     </nav>
-   <form class="login-form">
-        <h2>Login</h2>
+    <form class="login-form">
+      <h2>Login</h2>
 
-        <select required>
-            <option value="" disabled selected>Select Role</option>
-            <option value="user">User</option>
-            <option value="admin">Admin</option>
-        </select>
+      <select required>
+        <option value="" disabled selected>Select Role</option>
+        <option value="user">User</option>
+        <option value="admin">Admin</option>
+      </select>
 
-        <input type="text" placeholder="Username" required>
-        <input type="password" placeholder="Password" required>
+      <input type="text" placeholder="Username" required />
+      <input type="password" placeholder="Password" required />
 
-        <button type="submit">Login</button>
+      <button type="submit">Login</button>
 
-        <p>Don't have an account? <a href="#">Register</a></p>
+      <p>Don't have an account? <a href="#">Register</a></p>
     </form>
-    
+
+    <div class="hero"><span>Welcome,</span><span>Admin</span></div>
+    <div class="categories">
+      <button><a href="#">Today's Special</a></button>
+      <button><a href="#">Combos</a></button>
+      <button><a href="#">Veg</a></button>
+      <button><a href="#">Non-veg</a></button>
+    </div>
+
+    <div class="menu">
+      <div class="specials">
+        <h2>Todays Special</h2>
+        <div class="titles"><span>Items</span><span>Price</span></div>
+
+        <div class="items">
+          <span>Panner</span>
+
+          <div class="priceActionsWrapper">
+            <span>240 /-</span>
+
+            <div class="actions">
+              <button class="actionButton">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+              <button class="actionButton">
+                <i class="fa-solid fa-trash"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="items">
+          <span>Panner</span>
+
+          <div class="priceActionsWrapper">
+            <span>240 /-</span>
+
+            <div class="actions">
+              <button class="actionButton">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+              <button class="actionButton">
+                <i class="fa-solid fa-trash"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

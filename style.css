@@ -11,9 +11,12 @@
 }
 
 body {
-    background: var(--cream);
     color: var(--maroon);
     font-family: 'Poppins', sans-serif;
+    background-image: url(./Images/Warm\ Food\ Icon\ Pattern\ BG.png);
+    background-repeat: repeat;
+    background-size: 400px auto;
+    background-position: center top;
 }
 
 /* Navbar */
@@ -126,11 +129,108 @@ p {
     color: #666;
 }
 
-a {
+.login-form a {
     color: var(--maroon);
     text-decoration: none;
 }
 
+
+.menu,
+.hero,
+.categories {
+    /* border: 1px solid black; */
+    margin: 1rem auto;
+    padding: .4rem;
+    width: 80%;
+    background: #fffaf2;
+    border-radius: .4rem;
+}
+
+.menu h2{
+    color: var(--gold);
+}
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.4rem;
+    font-weight: 600;
+}
+
+.hero span:nth-child(1) {
+    font-family: "poppins" sans-serif;
+    color: #2b1b1d;
+}
+
+.categories {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 0.2rem;
+    align-items: center;
+}
+
+.categories button {
+    min-height: 2.2rem;
+    min-width: 6rem;
+    padding: 0.3rem 0.8rem;
+
+    font-size: 1rem;
+    text-align: center;
+
+    background: var(--maroon);
+    font-family: 'Times New Roman', Times, serif;
+
+    border-radius: 0.4rem;
+    border: 1px solid white;
+
+    cursor: pointer;
+}
+
+.categories a {
+    text-decoration: none;
+    color: white;
+}
+
+.titles,
+.items,
+.priceActionsWrapper {
+    gap: 1rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 1rem;
+}
+
+.priceActionsWrapper {
+    gap: 2rem;
+}
+
+.titles {
+    margin-right: 7rem;
+}
+
+.titles span {
+    font-size: 1.2rem;
+    font-weight: 600;
+
+}
+
+.actions {
+    display: flex;
+    gap: .1rem;
+}
+
+.actionButton {
+    background: var(--maroon);
+    border: 1px solid white;
+    height: 1.4rem;
+    width: 1.4rem;
+    color: white;
+    font-size: .6rem;
+    border-radius: .2rem;
+    text-align: center;
+}
 
 
 @media (max-width: 768px) {
@@ -185,4 +285,18 @@ a {
     .login-form h2 {
         font-size: 1.3rem;
     }
+
+    .hero{
+        flex-direction: column;
+        font-size: 1.4rem;
+    }
+    .categories {
+        flex-direction: column;
+    }
+
+    .categories button {
+        width: 80%;
+    }
+
+
 }
