@@ -61,8 +61,11 @@ nav,
 
 /* Login Form */
 
-.login-form {
+.login-form,
+.register-form,
+.addItem-form {
     display: none;
+    flex-direction: column;
 
     position: fixed;
     top: 50%;
@@ -80,7 +83,13 @@ nav,
     margin: 2rem auto;
 }
 
-.login-form h2 {
+/* .register-form {
+    display: flex;
+} */
+
+.login-form h2,
+.register-form h2,
+.addItem-form h2 {
     text-align: center;
     margin-bottom: 1.25rem;
     color: var(--maroon);
@@ -107,7 +116,9 @@ select:focus {
     border-color: var(--gold);
 }
 
-.login-form button {
+.login-form button,
+.register-form button,
+.addItem-form button {
     width: 100%;
     padding: 0.7rem;
 
@@ -123,7 +134,10 @@ select:focus {
     cursor: pointer;
 }
 
-.login-form button:hover {
+.login-form button:hover,
+.register-form button:hover,
+.addItem-form button:hover,
+.categories button:hover {
     background: var(--gold);
 }
 
@@ -134,25 +148,30 @@ p {
     color: #666;
 }
 
-.login-form a {
+.login-form a,
+.register-form a {
     color: var(--maroon);
     text-decoration: none;
 }
 
 
-.menu,
+.categoryCards,
+.ordersCard,
 .hero,
 .categories {
     /* border: 1px solid black; */
     margin: 1rem auto;
-    padding: .4rem;
+    padding: 1rem .6rem;
     width: 80%;
     background: #fffaf2;
     border-radius: .4rem;
 }
 
+
 .menu h2 {
     color: var(--gold);
+    text-align: center;
+    text-decoration: underline;
 }
 
 .hero {
@@ -168,14 +187,16 @@ p {
     color: #2b1b1d;
 }
 
-.categories {
+.categories,
+.placeOrderCancelOrderWrapper {
     display: flex;
     justify-content: space-evenly;
     gap: 0.2rem;
     align-items: center;
 }
 
-.categories button {
+.categories button,
+.placeOrderCancelOrderWrapper button {
     min-height: 2.2rem;
     min-width: 6rem;
     padding: 0.3rem 0.8rem;
@@ -254,6 +275,16 @@ p {
     width: 3rem;
     height: 3rem;
     border-radius: 50%;
+}
+
+.placeOrderCancelOrderWrapper button {
+    color: white;
+    width: 100%;
+    margin: .4rem;
+}
+
+.ordersCard {
+    display: none;
 }
 
 .cartCount {

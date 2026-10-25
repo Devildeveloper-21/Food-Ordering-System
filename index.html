@@ -39,7 +39,8 @@
 
       <p>Don't have an account? <a href="#">Register</a></p>
     </form>
-    <form class="login-form">
+
+    <form class="register-form">
       <h2>Register</h2>
 
       <input type="text" placeholder="Name" required />
@@ -52,6 +53,19 @@
       <p>Already have an account? <a href="#">Login</a></p>
     </form>
 
+    <form class="addItem-form">
+      <h2>Add Item</h2>
+      <input type="text" placeholder="Enter item" required />
+      <select required>
+        <option value="" disabled selected>Select Category</option>
+        <option value="user">Today Special</option>
+        <option value="admin">Veg</option>
+        <option value="admin">Non-Veg</option>
+      </select>
+      <input type="text" placeholder="Enter price" required />
+      <button type="submit">Add</button>
+    </form>
+
     <div class="hero"><span>Welcome,</span><span>Admin</span></div>
     <div class="categories">
       <button><a href="#">Today's Special</a></button>
@@ -61,7 +75,7 @@
     </div>
 
     <div class="menu">
-      <div class="specials">
+      <div class="specials categoryCards">
         <h2>Todays Special</h2>
         <div class="titles"><span>Items</span><span>Price</span></div>
 
@@ -71,7 +85,49 @@
           <div class="priceActionsWrapper">
             <span>240 /-</span>
 
-            <div class="actions ">
+            <div class="actions">
+              <button class="actionButton addToCart">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+              <button class="actionButton deleteItem">
+                <i class="fa-solid fa-trash"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="specials categoryCards">
+        <h2>Veg</h2>
+        <div class="titles"><span>Items</span><span>Price</span></div>
+
+        <div class="items">
+          <span>Panner</span>
+
+          <div class="priceActionsWrapper">
+            <span>240 /-</span>
+
+            <div class="actions">
+              <button class="actionButton addToCart">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+              <button class="actionButton deleteItem">
+                <i class="fa-solid fa-trash"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="specials categoryCards">
+        <h2>Non-Veg</h2>
+        <div class="titles"><span>Items</span><span>Price</span></div>
+
+        <div class="items">
+          <span>Panner</span>
+
+          <div class="priceActionsWrapper">
+            <span>240 /-</span>
+
+            <div class="actions">
               <button class="actionButton addToCart">
                 <i class="fa-solid fa-plus"></i>
               </button>
@@ -83,7 +139,32 @@
         </div>
       </div>
     </div>
-    <div class="cartButton"><i class="fa-solid fa-cart-shopping" style="color: #c9932a;"></i>
-    <div class="cartCount">0</div></div>
+    <div class="cartButton">
+      <i class="fa-solid fa-cart-shopping" style="color: #c9932a"></i>
+      <div class="cartCount">0</div>
+    </div>
+
+    <div class="ordersCard">
+      <div class="titles" style="color: #c9932a">
+        <span>Items</span><span>Price</span>
+      </div>
+      <div class="items">
+        <span>Panner</span>
+
+        <div class="priceActionsWrapper">
+          <span>240 /-</span>
+
+          <div class="actions">
+            <button class="actionButton deleteItem">
+              <i class="fa-solid fa-trash"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="placeOrderCancelOrderWrapper">
+        <button>Cancel Order</button>
+        <button>Place Order</button>
+      </div>
+    </div>
   </body>
 </html>
